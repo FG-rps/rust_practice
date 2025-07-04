@@ -1,9 +1,0 @@
-{
-  "name": "Custom Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "remoteUser": "dev"
-}
-
