@@ -4,7 +4,7 @@ use std::io;
 fn main() {
     println!("Guess the number!");
 
-    let secret_number = rand::random_range(1..=100).to_string();
+    let secret_number = rand::random_range(1..=100);
 
     println!("The secret number is: {secret_number}");
 
@@ -15,6 +15,7 @@ fn main() {
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
     println!("You guessed: {guess}");
 
